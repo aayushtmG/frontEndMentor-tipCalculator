@@ -1,0 +1,307 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  box-sizing: border-box;
+}
+$sc: #26c0ab;
+$very-dark-cyan: #00494d;
+$dark: hsl(186, 14%, 43%);
+$gc: hsl(184, 14%, 56%);
+$light-gc: hsl(185, 41%, 84%);
+$very-light-gc: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+@mixin title {
+  font-size: 20px;
+  color: $dark;
+}
+
+body {
+  font-size: 24px;
+  font-weight: 700;
+  background-color: $light-gc;
+  font-family: "Space Mono";
+}
+
+.header-title {
+  margin: 2rem 0;
+  .title-wrapper {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: $very-dark-cyan;
+    font-weight: 700;
+  }
+}
+.calculator-container {
+  .calculator {
+    background-color: $white;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 30px 0 0;
+    padding: 2rem;
+  }
+}
+
+.bill-section {
+  h3 {
+    @include title;
+  }
+  .bill-input-wrapper {
+    position: relative;
+    .bill-input {
+      width: 100%;
+      font-size: 25px;
+      font-weight: 700;
+      padding: 0.5em;
+      margin: 0.5rem 0;
+      background-color: $very-light-gc;
+      border: 0;
+      text-align: right;
+
+      color: $very-dark-cyan;
+    }
+    .valid {
+      outline: 2px solid green;
+    }
+    .invalid {
+      outline: 2px solid red;
+    }
+    .dollar-icon {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+}
+
+.select-tip-section {
+  h3 {
+    @include title;
+    margin-top: 1em;
+  }
+  .tip-btn-container {
+    padding: 1em 0;
+    .tip-btn-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+      .tip-btn {
+        list-style: none;
+        width: 45%;
+        text-align: center;
+        margin-bottom: 0.4em;
+        padding: 0.2em;
+        font-size: 25px;
+        color: $white;
+        background-color: $very-dark-cyan;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .active {
+        background-color: $sc;
+        color: #00494d;
+      }
+      .custom-btn {
+        padding: 0;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+        .custom-btn-input {
+          width: 100%;
+          height: 100%;
+          text-align: right;
+          font-size: 1.2rem;
+          border: none;
+          font-weight: 700;
+          color: $very-dark-cyan;
+          border-radius: 4px;
+          padding: 0 10px;
+        }
+        .custom-btn-input:focus {
+          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+          background-color: $white;
+        }
+        .valid {
+          outline: 2px solid green;
+        }
+        .invalid {
+          outline: 2px solid red;
+        }
+        .custom-btn-input::placeholder {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.num-people-section {
+  position: relative;
+  h3 {
+    @include title;
+  }
+  .error-message {
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .num-people-wrapper {
+    position: relative;
+    .num-input {
+      width: 100%;
+      font-size: 25px;
+      font-weight: 700;
+      padding: 0.5em;
+      margin: 0.5rem 0;
+      background-color: $very-light-gc;
+      border: 0;
+      text-align: right;
+
+      color: $very-dark-cyan;
+    }
+    .valid {
+      outline: 2px solid green;
+    }
+    .invalid {
+      outline: 2px solid red;
+    }
+
+    .people-icon {
+      position: absolute;
+      left: 20px;
+      top: 18px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+  background: $very-dark-cyan;
+  border-radius: 10px;
+  padding: 1.5em 1em 1em;
+  margin-top: 1em;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+    }
+    .info-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+      .info-title {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          @include title;
+          color: $very-light-gc;
+          font-size: 1rem;
+        }
+        .per-person {
+          color: $gc;
+          font-size: 0.8rem;
+        }
+      }
+      .info-amount {
+        color: $sc;
+        font-size: 30px;
+      }
+    }
+    .reset-btn-container {
+      background-color: $sc;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      padding: 0.2em 0;
+      .reset-btn {
+        text-decoration: none;
+        color: $very-dark-cyan;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// DESKTOP VERSION
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-title {
+    margin: 2rem 0;
+    .title-wrapper {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+      color: $very-dark-cyan;
+      font-weight: 700;
+    }
+  }
+  .calculator-container {
+    .calculator {
+      margin: auto;
+      width: 50%;
+      display: flex;
+
+      border-radius: 30px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.148);
+      .info-container {
+        width: 45%;
+        margin-top: 0;
+        margin-left: auto;
+        ul {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          li {
+            margin-bottom: 3rem;
+          }
+          .reset-btn-container {
+            margin-top: auto;
+            margin-bottom: 0;
+          }
+          .info-title {
+            h3 {
+              font-size: 1.5rem;
+            }
+          }
+          .info-amount {
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .billing-container {
+        width: 50%;
+        .tip-btn {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .calculator-container {
+    .calculator {
+      width: 70%;
+    }
+  }
+}

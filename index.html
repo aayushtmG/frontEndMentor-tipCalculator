@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop-wrapper">
+      <header class="header-title">
+        <div class="title-wrapper">spli<br />tter</div>
+      </header>
+      <div class="calculator-container">
+        <div class="calculator">
+          <div class="billing-container">
+            <div class="bill-section">
+              <h3>Bill</h3>
+              <div class="bill-input-wrapper">
+                <input
+                  type="text"
+                  class="bill-input"
+                  autocomplete="off"
+                  required
+                />
+                <span class="dollar-icon"
+                  ><img src="./images/icon-dollar.svg" alt="dollar-icon"
+                /></span>
+              </div>
+            </div>
+            <div class="select-tip-section">
+              <h3>Select Tip %</h3>
+              <div class="tip-btn-container">
+                <ul class="tip-btn-wrapper">
+                  <li class="tip-btn" value="5">5%</li>
+                  <li class="tip-btn" value="10">10%</li>
+                  <li class="tip-btn" value="15">15%</li>
+                  <li class="tip-btn" value="25">25%</li>
+                  <li class="tip-btn" value="50">50%</li>
+                  <li class="tip-btn custom-btn">
+                    <input
+                      type="text"
+                      placeholder="Custom"
+                      class="custom-btn-input"
+                      autocomplete="off"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="num-people-section">
+              <h3>Number Of People</h3>
+              <h3 class="error-message"></h3>
+              <div class="num-people-wrapper">
+                <input
+                  type="text"
+                  class="num-input"
+                  autocomplete="off"
+                  placeholder=" "
+                  required
+                />
+                <span class="people-icon"
+                  ><img src="./images/icon-person.svg" alt="person-icon"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="info-container">
+            <ul>
+              <li class="info-content">
+                <div class="info-title">
+                  <h3>Tip Amount</h3>
+                  <span class="per-person">/ person</span>
+                </div>
+                <div class="info-amount">
+                  $<span class="tip-amount">0.00</span>
+                </div>
+              </li>
+              <li class="info-content">
+                <div class="info-title">
+                  <h3>Total</h3>
+                  <span class="per-person">/ person</span>
+                </div>
+                <div class="info-amount">
+                  $<span class="total-amount">0.00</span>
+                </div>
+              </li>
+              <li class="reset-btn-container">
+                <a href="#" class="reset-btn">Reset</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

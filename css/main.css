@@ -1,0 +1,289 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  font-weight: 700;
+  background-color: hsl(185deg, 41%, 84%);
+  font-family: "Space Mono";
+}
+
+.header-title {
+  margin: 2rem 0;
+}
+.header-title .title-wrapper {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #00494d;
+  font-weight: 700;
+}
+
+.calculator-container .calculator {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 30px 0 0;
+  padding: 2rem;
+}
+
+.bill-section h3 {
+  font-size: 20px;
+  color: hsl(186deg, 14%, 43%);
+}
+.bill-section .bill-input-wrapper {
+  position: relative;
+}
+.bill-section .bill-input-wrapper .bill-input {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 0.5em;
+  margin: 0.5rem 0;
+  background-color: hsl(189deg, 41%, 97%);
+  border: 0;
+  text-align: right;
+  color: #00494d;
+}
+.bill-section .bill-input-wrapper .valid {
+  outline: 2px solid green;
+}
+.bill-section .bill-input-wrapper .invalid {
+  outline: 2px solid red;
+}
+.bill-section .bill-input-wrapper .dollar-icon {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.bill-section .bill-input-wrapper .dollar-icon img {
+  width: 14px;
+}
+
+.select-tip-section h3 {
+  font-size: 20px;
+  color: hsl(186deg, 14%, 43%);
+  margin-top: 1em;
+}
+.select-tip-section .tip-btn-container {
+  padding: 1em 0;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .tip-btn {
+  list-style: none;
+  width: 45%;
+  text-align: center;
+  margin-bottom: 0.4em;
+  padding: 0.2em;
+  font-size: 25px;
+  color: hsl(0deg, 0%, 100%);
+  background-color: #00494d;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn {
+  padding: 0;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .custom-btn-input {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  font-size: 1.2rem;
+  border: none;
+  font-weight: 700;
+  color: #00494d;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .custom-btn-input:focus {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  background-color: hsl(0deg, 0%, 100%);
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .valid {
+  outline: 2px solid green;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .invalid {
+  outline: 2px solid red;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .custom-btn-input::-moz-placeholder {
+  text-align: center;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .custom-btn-input:-ms-input-placeholder {
+  text-align: center;
+}
+.select-tip-section .tip-btn-container .tip-btn-wrapper .custom-btn .custom-btn-input::placeholder {
+  text-align: center;
+}
+
+.num-people-section {
+  position: relative;
+}
+.num-people-section h3 {
+  font-size: 20px;
+  color: hsl(186deg, 14%, 43%);
+}
+.num-people-section .error-message {
+  font-size: 15px;
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.num-people-section .num-people-wrapper {
+  position: relative;
+}
+.num-people-section .num-people-wrapper .num-input {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 0.5em;
+  margin: 0.5rem 0;
+  background-color: hsl(189deg, 41%, 97%);
+  border: 0;
+  text-align: right;
+  color: #00494d;
+}
+.num-people-section .num-people-wrapper .valid {
+  outline: 2px solid green;
+}
+.num-people-section .num-people-wrapper .invalid {
+  outline: 2px solid red;
+}
+.num-people-section .num-people-wrapper .people-icon {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+.num-people-section .num-people-wrapper .people-icon img {
+  width: 14px;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+  background: #00494d;
+  border-radius: 10px;
+  padding: 1.5em 1em 1em;
+  margin-top: 1em;
+}
+.info-container ul {
+  padding: 0;
+}
+.info-container ul li {
+  list-style: none;
+}
+.info-container ul .info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.info-container ul .info-content .info-title {
+  display: flex;
+  flex-direction: column;
+}
+.info-container ul .info-content .info-title h3 {
+  font-size: 20px;
+  color: hsl(186deg, 14%, 43%);
+  color: hsl(189deg, 41%, 97%);
+  font-size: 1rem;
+}
+.info-container ul .info-content .info-title .per-person {
+  color: hsl(184deg, 14%, 56%);
+  font-size: 0.8rem;
+}
+.info-container ul .info-content .info-amount {
+  color: #26c0ab;
+  font-size: 30px;
+}
+.info-container ul .reset-btn-container {
+  background-color: #26c0ab;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.2em 0;
+}
+.info-container ul .reset-btn-container .reset-btn {
+  text-decoration: none;
+  color: #00494d;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-title {
+    margin: 2rem 0;
+  }
+  .header-title .title-wrapper {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: #00494d;
+    font-weight: 700;
+  }
+  .calculator-container .calculator {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.148);
+  }
+  .calculator-container .calculator .info-container {
+    width: 45%;
+    margin-top: 0;
+    margin-left: auto;
+  }
+  .calculator-container .calculator .info-container ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .calculator-container .calculator .info-container ul li {
+    margin-bottom: 3rem;
+  }
+  .calculator-container .calculator .info-container ul .reset-btn-container {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+  .calculator-container .calculator .info-container ul .info-title h3 {
+    font-size: 1.5rem;
+  }
+  .calculator-container .calculator .info-container ul .info-amount {
+    font-size: 2.5rem;
+  }
+  .calculator-container .calculator .billing-container {
+    width: 50%;
+  }
+  .calculator-container .calculator .billing-container .tip-btn {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .calculator-container .calculator {
+    width: 70%;
+  }
+}/*# sourceMappingURL=main.css.map */
